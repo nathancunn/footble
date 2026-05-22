@@ -1,0 +1,158 @@
+:root {
+  --wiki-bg: #ffffff;
+  --wiki-text: #202122;
+  --wiki-link: #0645ad;
+  --wiki-border: #a2a9b1;
+  --wiki-header-bg: #eaecf0;
+  --wiki-row-hover: #f8f9fa;
+  --wiki-font: sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--wiki-font);
+  background-color: #f6f6f6;
+  color: var(--wiki-text);
+  line-height: 1.6;
+  padding: 1rem; /* Reduced padding for mobile */
+}
+
+#app {
+  width: 100%;
+  max-width: 900px;
+  background: var(--wiki-bg);
+  padding: 1rem; /* Reduced padding for mobile */
+  border: 1px solid var(--wiki-border);
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  margin: 0 auto; /* Center on larger screens */
+  box-sizing: border-box;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--wiki-border);
+  padding-bottom: 0.5rem;
+}
+
+.logo-placeholder {
+  width: 32px;
+  height: 32px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+h1 {
+  font-family: 'Linux Libertine', 'Georgia', serif;
+  font-weight: normal;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* Wikipedia Career Table Style */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling on small screens */
+}
+
+.career-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 90%;
+  min-width: 400px; /* Ensure table doesn't squish too much */
+}
+
+.career-table th {
+  background-color: var(--wiki-header-bg);
+  border: 1px solid var(--wiki-border);
+  padding: 0.4rem;
+  text-align: left;
+}
+
+.career-table td {
+  border: 1px solid var(--wiki-border);
+  padding: 0.4rem;
+}
+
+.career-table tr:hover {
+  background-color: var(--wiki-row-hover);
+}
+
+.guess-section {
+  clear: both;
+  background: #f8f9fa;
+  padding: 1rem;
+  border: 1px solid var(--wiki-border);
+  border-radius: 2px;
+}
+
+.guess-form {
+  display: flex;
+  flex-direction: column; /* Stack vertically on mobile */
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 600px) {
+  .guess-form {
+    flex-direction: row; /* Row layout on larger screens */
+  }
+}
+
+input {
+  padding: 0.6rem; /* Slightly larger touch target */
+  border: 1px solid var(--wiki-border);
+  flex-grow: 1;
+}
+
+button {
+  background-color: #eaecf0;
+  border: 1px solid var(--wiki-border);
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #fff;
+}
+
+.message {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-left: 5px solid #ccc;
+}
+
+.message.win {
+  border-color: #10b981;
+  background: #e6fffa;
+}
+
+.message.error {
+  border-color: #ef4444;
+  background: #fff5f5;
+}
+
+.attempts-text {
+  font-size: 0.9rem;
+  color: #54595d;
+}
+
+.play-again-btn {
+  margin-top: 0.5rem;
+  color: var(--wiki-link);
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  font-weight: normal;
+  display: block;
+}

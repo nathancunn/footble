@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footballer Guessing Game - Wikipedia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" class="game-container">
+        <div class="header-container">
+            <div class="logo-placeholder"></div>
+            <h1 id="game-title">Footble</h1>
+        </div>
+        
+        <div id="game-content">
+            <h3>Senior career*</h3>
+            <div class="table-responsive">
+                <table class="career-table">
+                    <thead>
+                    <tr>
+                        <th>Years</th>
+                        <th>Team</th>
+                        <th style="text-align: center;">Apps</th>
+                        <th style="text-align: center;">(Gls)</th>
+                    </tr>
+                </thead>
+                <tbody id="career-body">
+                    <!-- Rows will be injected by JS -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" style="font-size: 80%; color: #54595d; border: none;">
+                            * Senior club appearances and goals counted for the domestic league only.
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            </div>
+
+            <div class="guess-section">
+                <div id="attempts-status" class="attempts-text">
+                    <strong>Attempts used:</strong> 0 of 5
+                </div>
+                
+                <div id="input-area">
+                    <form id="guess-form" class="guess-form">
+                        <input type="text" id="guess-input" list="players-datalist" placeholder="Enter player name..." required>
+                        <datalist id="players-datalist">
+                            <!-- Options will be injected by JS -->
+                        </datalist>
+                        <button type="submit" id="submit-guess-btn" disabled>Submit guess</button>
+                    </form>
+                </div>
+
+                <div id="message-area" class="message" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="game.js"></script>
+</body>
+</html>
