@@ -14,17 +14,20 @@ body {
   background-color: #f6f6f6;
   color: var(--wiki-text);
   line-height: 1.6;
-  padding: 1rem; /* Reduced padding for mobile */
+  padding: 1rem;
+  /* Reduced padding for mobile */
 }
 
 #app {
   width: 100%;
   max-width: 900px;
   background: var(--wiki-bg);
-  padding: 1rem; /* Reduced padding for mobile */
+  padding: 1rem;
+  /* Reduced padding for mobile */
   border: 1px solid var(--wiki-border);
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  margin: 0 auto; /* Center on larger screens */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  /* Center on larger screens */
   box-sizing: border-box;
 }
 
@@ -59,15 +62,18 @@ h1 {
 /* Wikipedia Career Table Style */
 .table-responsive {
   width: 100%;
-  overflow-x: auto; /* Enable horizontal scrolling on small screens */
+  overflow-x: auto;
+  /* Enable horizontal scrolling on small screens */
 }
 
 .career-table {
   width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
   margin: 1rem 0;
   font-size: 90%;
-  min-width: 400px; /* Ensure table doesn't squish too much */
+  /* min-width: 400px; */
+  /* Ensure table doesn't squish too much */
 }
 
 .career-table th {
@@ -96,19 +102,22 @@ h1 {
 
 .guess-form {
   display: flex;
-  flex-direction: column; /* Stack vertically on mobile */
+  flex-direction: column;
+  /* Stack vertically on mobile */
   gap: 0.5rem;
   margin-top: 1rem;
 }
 
 @media (min-width: 600px) {
   .guess-form {
-    flex-direction: row; /* Row layout on larger screens */
+    flex-direction: row;
+    /* Row layout on larger screens */
   }
 }
 
 input {
-  padding: 0.6rem; /* Slightly larger touch target */
+  padding: 0.6rem;
+  /* Slightly larger touch target */
   border: 1px solid var(--wiki-border);
   flex-grow: 1;
 }
