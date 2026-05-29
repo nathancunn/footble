@@ -24,7 +24,7 @@ const initGame = async () => {
         hash = ((hash << 5) - hash) + todayStr.charCodeAt(i);
         hash |= 0;
     }
-    const dailyIndex = Math.abs(hash) % players.length;
+    const dailyIndex = Math.abs(hash * 15485863) % players.length;
     const random = players[dailyIndex];
 
     // Filter out "Total" rows and empty clubs
@@ -243,9 +243,9 @@ const render = () => {
         let shareText = '';
         if (status === 'win') {
             const score = attempt + 1;
-            shareText = `Journeymen #${dayNumber} [${score}/${maxAttempts}]\n${'❌'.repeat(attempt)}⚽`;
+            shareText = `Journeymen #${dayNumber} [${score}/${maxAttempts}]\n${'❌'.repeat(attempt)}⚽\njrnymn.xyz`;
         } else {
-            shareText = `Journeymen #${dayNumber} [X/${maxAttempts}]\n${'❌'.repeat(maxAttempts)}`;
+            shareText = `Journeymen #${dayNumber} [X/${maxAttempts}]\n${'❌'.repeat(maxAttempts)}\njrnymn.xyz`;
         }
 
         messageArea.innerHTML = `
